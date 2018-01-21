@@ -1,0 +1,19 @@
+{
+	"name": "api-rest",
+	"version": "1.0.0",
+	"description": "Proyecto de API RESTFull con Node JS y Express JS",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index.js"
+	},
+	"author": "Sanders Gutiérrez",
+	"license": "MIT",
+	"dependencies": {
+		"body-parser": "^1.15.2",
+		"express": "^4.14.0",
+		"mongoose": "^4.6.5"
+	},
+	"devDependencies": {
+		"nodemon": "^1.11.0"
+	}
+}
