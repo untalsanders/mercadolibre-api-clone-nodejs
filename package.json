@@ -9,11 +9,11 @@
 	"author": "Sanders Gutiérrez",
 	"license": "MIT",
 	"dependencies": {
-		"body-parser": "^1.15.2",
-		"express": "^4.14.0",
-		"mongoose": "^4.6.5"
+		"body-parser": "^1.19.0",
+		"express": "^4.16.4",
+		"mongoose": "^5.5.4"
 	},
 	"devDependencies": {
-		"nodemon": "^1.11.0"
+		"nodemon": "^1.18.11"
 	}
 }
