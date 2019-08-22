@@ -1,8 +1,8 @@
-'use strict'
+"use strict";
 
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 const ProductoSchema = Schema({
     nombre: String,
@@ -13,9 +13,9 @@ const ProductoSchema = Schema({
     },
     categoria: {
         type: String,
-        enum: ['computadores', 'telefonos', 'accesorios']
+        enum: ["computadores", "telefonos", "accesorios"]
     },
     descripcion: String
-})
+});
 
-module.exports = mongoose.model('Producto', ProductoSchema)
+module.exports = mongoose.model("Producto", ProductoSchema);
