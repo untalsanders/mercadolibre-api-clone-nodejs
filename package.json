@@ -6,7 +6,7 @@
     "scripts": {
         "start": "nodemon index.js"
     },
-    "author": "Sanders Gutiérrez",
+    "author": "Sanders Gutiérrez <ing.sanders@gmail.com>",
     "license": "MIT",
     "dependencies": {
         "body-parser": "^1.19.0",
@@ -14,7 +14,7 @@
         "mongoose": "^5.7.5"
     },
     "devDependencies": {
-        "nodemon": "^1.18.11",
-        "minimist": "^1.2.2"
+        "minimist": "^1.2.5",
+        "nodemon": "^2.0.3"
     }
 }
