@@ -4,7 +4,9 @@
     "description": "Proyecto de API RESTFull con Node JS y Express JS",
     "main": "index.js",
     "scripts": {
-        "format": "prettier --write ."
+        "start:dev": "nodemon",
+        "format": "prettier --write .",
+        "lint": "eslint \"src/**/*.js\" --fix"
     },
     "author": "Sanders Gutiérrez <ing.sanders@gmail.com>",
     "license": "MIT",
