@@ -2,14 +2,15 @@
     "name": "api-rest",
     "version": "0.0.1",
     "description": "Proyecto de API RESTFull con Node JS y Express JS",
+    "author": "Sanders Gutiérrez <ing.sanders@gmail.com>",
+    "license": "MIT",
     "main": "src/index.js",
     "scripts": {
+        "start": "node src/index.js",
         "start:dev": "nodemon",
         "format": "prettier --write .",
         "lint": "eslint \"src/**/*.js\" --fix"
     },
-    "author": "Sanders Gutiérrez <ing.sanders@gmail.com>",
-    "license": "MIT",
     "dependencies": {
         "dotenv": "^8.2.0",
         "express": "^4.16.4",
