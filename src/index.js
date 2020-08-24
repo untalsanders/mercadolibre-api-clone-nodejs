@@ -12,9 +12,13 @@ const mongooseOptions = {
     useUnifiedTopology: true,
 };
 
-mongoose.connect(config.db.uri, mongooseOptions);
-const conn = mongoose.connection;
+mongoose.connect(config.db.uri, mongooseOptions, (err) => {
+    if (err) {
+        return console.log(`Error al conectar a la base de datos: ${err}`);
+    }
+});
 
+const conn = mongoose.connection;
 conn.on('error', console.error.bind(console, 'connection error:'));
 conn.once('open', function () {
     console.log('Conexión a la base de datos establecida.');
