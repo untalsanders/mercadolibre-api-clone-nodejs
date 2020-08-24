@@ -8,7 +8,7 @@ const DB_NAME = process.env.DB_NAME;
 const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
 
-let mongodbUri = (process.env.APP_DEBUG === 1)
+let mongodbUri = (process.env.APP_DEBUG === "true")
         ? `mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`
         : `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
 
