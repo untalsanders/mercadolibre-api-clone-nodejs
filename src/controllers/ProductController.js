@@ -47,11 +47,13 @@ const getProduct = (req, res) => {
 const saveProduct = (req, res) => {
     const product = new Product();
 
-    product.name = req.body.name;
-    product.photo = req.body.photo;
-    product.price = req.body.price;
-    product.category = req.body.category;
-    product.description = req.body.description;
+    ({
+        name: product.name,
+        photo: product.photo,
+        price: product.price,
+        category: product.category,
+        description: product.description
+    } = req.body);
 
     product.save((err, productStored) => {
         if (err) {

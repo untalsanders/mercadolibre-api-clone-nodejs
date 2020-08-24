@@ -5,25 +5,20 @@ const moment = require('moment');
 const config = require('./config');
 const server = require('./server');
 
-const dateNow = moment().format('LTS');
+const dateNow = moment().format('YYYY/MM/DD HH:mm:ss Z');
 
 const mongooseOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 };
 
-mongoose.connect(config.db.uri, mongooseOptions, (err) => {
-    if (err) {
-        return console.log(`Error al conectar a la base de datos: ${err}`);
-    }
-});
+mongoose
+    .connect(config.db.uri, mongooseOptions)
+    .then(() => console.info(`${dateNow} - DATABASE: Connection has been successfuly!`))
+    .catch((error) => console.error(`${dateNow} - DATABASE: Error in initial connection: ${error.reason()}`));
 
-const conn = mongoose.connection;
-conn.on('error', console.error.bind(console, 'connection error:'));
-conn.once('open', function () {
-    console.log('Conexión a la base de datos establecida.');
+mongoose.connection.on('error', (err) => console.error(err));
 
-    server.listen(config.port, config.host, () => {
-        console.log(`API REST running on http://${config.host}:${config.port} at ${dateNow}`);
-    });
+server.listen(config.port, config.host, () => {
+    console.info(`${dateNow} - API: Running on http://${config.host}:${config.port}`);
 });

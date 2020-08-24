@@ -1,6 +1,7 @@
 'use strict';
 
 const { Router } = require('express');
+const router = Router();
 const {
     deleteProduct,
     getAllProducts,
@@ -8,7 +9,6 @@ const {
     saveProduct,
     updateProduct,
 } = require('../controllers/ProductController');
-const router = Router();
 
 router.get('/products', getAllProducts);
 router.get('/products/:productId', getProduct);
