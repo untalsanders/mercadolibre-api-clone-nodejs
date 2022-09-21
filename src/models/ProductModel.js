@@ -1,7 +1,7 @@
 'use strict'
 
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+import pkg from 'mongoose'
+const { Schema, model } = pkg
 
 const productSchema = Schema({
     name: String,
@@ -19,4 +19,4 @@ const productSchema = Schema({
     updatedAt: { type: Date },
 })
 
-module.exports = mongoose.model('Product', productSchema)
+export const Product = model('Product', productSchema)

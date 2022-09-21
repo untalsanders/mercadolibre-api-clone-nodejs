@@ -1,19 +1,22 @@
 'use strict'
 
-const mongoose = require('mongoose')
-const config = require('./config')
-const moment = require('moment')
+import chalk from 'chalk'
+import pkg from 'mongoose'
+import { DB } from './config.js'
 
-const dateNow = moment().format('YYYY/MM/DD HH:mm:ss Z')
+const { connect, connection } = pkg
 
 const mongooseOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }
 
-mongoose
-    .connect(config.db.uri, mongooseOptions)
-    .then(() => console.info(`${dateNow} - DATABASE: Connection has been successfuly!`))
-    .catch((error) => console.error(`${dateNow} - DATABASE: Error in initial connection: ${error.reason()}`))
+connect(DB.uri, mongooseOptions)
+    .then(() => console.log(`${chalk.black.bold.bgWhite(' DB ')} ${chalk.green(' Connection has been successfuly! ')}`))
+    .catch((err) =>
+        console.log(`${chalk.white.bold.bgRed(' ERROR ')} in initial connection -> ${chalk.red(err.message)}`)
+    )
 
-mongoose.connection.on('error', (err) => console.error(err))
+if (process.env.NODE_ENV !== 'production') {
+    connection.on('error', (err) => console.error(err))
+}

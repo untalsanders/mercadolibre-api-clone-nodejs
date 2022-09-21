@@ -5,22 +5,24 @@
     "author": "Sanders Gutiérrez <ing.sanders@gmail.com>",
     "license": "MIT",
     "main": "src/index.js",
+    "type": "module",
     "scripts": {
         "postinstall": "cp .env.example .env",
         "start": "node src/index.js",
         "dev": "nodemon",
         "format": "prettier --write .",
-        "lint": "eslint \"src/**/*.js\" --fix"
+        "lint": "eslint \"src/**/*.js\"",
+        "lint:fix": "eslint \"src/**/*.js\" --fix"
     },
     "dependencies": {
-        "express": "^4.16.4",
-        "moment": "^2.27.0",
-        "mongoose": "^5.10.0"
+        "chalk": "^5.0.1",
+        "express": "^4.18.1",
+        "mongoose": "^6.6.1"
     },
     "devDependencies": {
-        "dotenv": "^8.2.0",
-        "eslint": "^7.7.0",
-        "nodemon": "^2.0.3",
-        "prettier": "2.0.5"
+        "dotenv": "^16.0.2",
+        "eslint": "^8.23.1",
+        "nodemon": "^2.0.20",
+        "prettier": "^2.7.1"
     }
 }

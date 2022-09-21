@@ -1,19 +1,14 @@
 'use strict'
 
-const { Router } = require('express')
-const router = Router()
-const {
-    deleteProduct,
-    getAllProducts,
-    getProduct,
-    saveProduct,
-    updateProduct,
-} = require('../controllers/ProductController')
+import { Router } from 'express'
+import { getProducts, getProduct, saveProduct, updateProduct, deleteProduct } from '../controllers/ProductController.js'
 
-router.get('/products', getAllProducts)
+const router = Router()
+
+router.get('/products', getProducts)
 router.get('/products/:productId', getProduct)
 router.post('/products', saveProduct)
 router.put('/products/:productId', updateProduct)
 router.delete('/products/:productId', deleteProduct)
 
-module.exports = router
+export default router

@@ -1,12 +1,12 @@
 'use strict'
 
-const moment = require('moment')
-const config = require('./config')
-const server = require('./server')
-require('./database')
+import chalk from 'chalk'
+import server from './server.js'
+import { HOST, PORT } from './config.js'
+import './database.js'
 
-const dateNow = moment().format('YYYY/MM/DD HH:mm:ss Z')
-
-server.listen(config.port, config.host, () => {
-    console.info(`${dateNow} - API: Running on http://${config.host}:${config.port}`)
+server.listen(PORT, HOST, () => {
+    console.info(
+        `${chalk.white.bold.bgGreen(' SERVER ')} ${chalk.green('is running at')} ${chalk.blue('http://' + HOST + ':' + PORT)}`
+    )
 })

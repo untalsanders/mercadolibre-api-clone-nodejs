@@ -1,8 +1,8 @@
 'use strict'
 
-const Product = require('../models/ProductModel')
+import { Product } from '../models/ProductModel.js'
 
-const getAllProducts = (req, res) => {
+export const getProducts = (req, res) => {
     Product.find({}, { __v: 0 }, (err, products) => {
         if (err) {
             return res.status(500).send({
@@ -12,7 +12,7 @@ const getAllProducts = (req, res) => {
 
         if (!products) {
             return res.status(200).send({
-                message: `No existen productos`,
+                message: 'No existen productos',
             })
         }
 
@@ -22,7 +22,7 @@ const getAllProducts = (req, res) => {
     })
 }
 
-const getProduct = (req, res) => {
+export const getProduct = (req, res) => {
     const { productId } = req.params
 
     Product.findById(productId, (err, product) => {
@@ -34,7 +34,7 @@ const getProduct = (req, res) => {
 
         if (!product) {
             return res.status(404).send({
-                message: `El producto no existe`,
+                message: 'El producto no existe',
             })
         }
 
@@ -44,7 +44,7 @@ const getProduct = (req, res) => {
     })
 }
 
-const saveProduct = (req, res) => {
+export const saveProduct = (req, res) => {
     const product = new Product()
 
     ;({
@@ -68,7 +68,7 @@ const saveProduct = (req, res) => {
     })
 }
 
-const updateProduct = (req, res) => {
+export const updateProduct = (req, res) => {
     const { productId } = req.params
     const updateBody = req.body
 
@@ -79,13 +79,13 @@ const updateProduct = (req, res) => {
             })
         }
 
-        res.status(200).send({
+        res.status(201).send({
             producto: productUpdated,
         })
     })
 }
 
-const deleteProduct = (req, res) => {
+export const deleteProduct = (req, res) => {
     const { productId } = req.params
 
     Product.findById(productId, (err, product) => {
@@ -103,16 +103,8 @@ const deleteProduct = (req, res) => {
             }
 
             res.status(200).send({
-                message: `El producto ha sido borrado`,
+                message: 'El producto ha sido borrado',
             })
         })
     })
-}
-
-module.exports = {
-    getProduct,
-    getAllProducts,
-    saveProduct,
-    updateProduct,
-    deleteProduct,
 }
