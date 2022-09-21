@@ -1,23 +1,24 @@
 {
-    "name": "api-rest",
+    "name": "online-shop",
     "version": "0.0.1",
     "description": "Proyecto de API RESTFull con Node JS y Express JS",
     "author": "Sanders Gutiérrez <ing.sanders@gmail.com>",
     "license": "MIT",
     "main": "src/index.js",
     "scripts": {
+        "postinstall": "cp .env.example .env",
         "start": "node src/index.js",
-        "start:dev": "nodemon",
+        "dev": "nodemon",
         "format": "prettier --write .",
         "lint": "eslint \"src/**/*.js\" --fix"
     },
     "dependencies": {
-        "dotenv": "^8.2.0",
         "express": "^4.16.4",
         "moment": "^2.27.0",
         "mongoose": "^5.10.0"
     },
     "devDependencies": {
+        "dotenv": "^8.2.0",
         "eslint": "^7.7.0",
         "nodemon": "^2.0.3",
         "prettier": "2.0.5"

@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const productSchema = Schema({
     name: String,
@@ -17,6 +17,6 @@ const productSchema = Schema({
     description: String,
     createdAt: { type: Date },
     updatedAt: { type: Date },
-});
+})
 
-module.exports = mongoose.model('Product', productSchema);
+module.exports = mongoose.model('Product', productSchema)
