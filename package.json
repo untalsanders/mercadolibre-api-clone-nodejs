@@ -7,7 +7,6 @@
     "main": "src/index.js",
     "type": "module",
     "scripts": {
-        "postinstall": "cp .env.example .env",
         "start": "node src/index.js",
         "dev": "nodemon",
         "format": "prettier --write .",
