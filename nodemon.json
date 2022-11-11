@@ -5,10 +5,10 @@
     "execMap": {
         "js": "node --harmony"
     },
-    "watch": ["src/", ".env"],
+    "watch": ["src/", "openapi.yml", ".env"],
     "env": {
         "NODE_ENV": "development"
     },
     "ext": "js,json",
-    "delay": 2500
+    "delay": 500
 }

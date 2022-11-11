@@ -1,27 +1,47 @@
 {
-    "name": "online-shop",
-    "version": "0.0.1",
+    "name": "products-api",
+    "version": "0.1.0",
     "description": "Proyecto de API RESTFull con Node JS y Express JS",
-    "author": "Sanders Gutiérrez <ing.sanders@gmail.com>",
+    "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://sandersgutierrez.github.io)",
     "license": "MIT",
     "main": "src/index.js",
     "type": "module",
     "scripts": {
         "start": "node src/index.js",
-        "dev": "nodemon",
+        "dev": "nodemon --config nodemon.json",
         "format": "prettier --write .",
         "lint": "eslint \"src/**/*.js\"",
         "lint:fix": "eslint \"src/**/*.js\" --fix"
     },
     "dependencies": {
+        "body-parser": "^1.20.0",
         "chalk": "^5.0.1",
+        "cors": "^2.8.5",
         "express": "^4.18.1",
-        "mongoose": "^6.6.1"
+        "mongoose": "^6.6.1",
+        "swagger-ui-express": "^4.5.0",
+        "yamljs": "^0.3.0"
     },
     "devDependencies": {
         "dotenv": "^16.0.2",
         "eslint": "^8.23.1",
         "nodemon": "^2.0.20",
         "prettier": "^2.7.1"
-    }
+    },
+    "engines": {
+        "node": ">=16",
+        "npm": ">=8"
+    },
+    "keywords": [
+        "api",
+        "products"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sandersgutierrez/products-api.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sandersgutierrez/products-api/issues"
+    },
+    "homepage": "https://github.com/sandersgutierrez/products-api#readme"
 }

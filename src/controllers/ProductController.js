@@ -6,18 +6,22 @@ export const getProducts = (req, res) => {
     Product.find({}, { __v: 0 }, (err, products) => {
         if (err) {
             return res.status(500).send({
+                status: 500,
                 message: `Ha ocurrido un error al procesar la peticion: ${err}`,
             })
         }
 
         if (!products) {
-            return res.status(200).send({
+            return res.status(204).send({
+                status: 204,
                 message: 'No existen productos',
             })
         }
 
         res.status(200).send({
-            products: products,
+            status: 200,
+            message: 'OK',
+            data: products,
         })
     })
 }
@@ -38,9 +42,7 @@ export const getProduct = (req, res) => {
             })
         }
 
-        res.status(200).send({
-            product: product,
-        })
+        res.status(200).send(product)
     })
 }
 
@@ -55,16 +57,14 @@ export const saveProduct = (req, res) => {
         description: product.description,
     } = req.body)
 
-    product.save((err, productStored) => {
+    product.save((err, productSaved) => {
         if (err) {
             res.status(500).send({
                 message: `Error al guardar en la base de datos: ${err}`,
             })
         }
 
-        res.status(201).send({
-            product: productStored,
-        })
+        res.status(201).send({ productSaved })
     })
 }
 
