@@ -6,6 +6,12 @@ if (process.env.NODE_ENV !== 'production') {
     dotenv.config()
 }
 
-export const HOST = process.env.HOST || 'localhost'
-export const PORT = process.env.PORT || 3000
-export const DB = { uri: process.env.MONGODB_URI }
+const config = {
+    HOST: process.env.HOST || 'localhost',
+    PORT: process.env.PORT || 3000,
+    MONGODB_URI: process.env.MONGODB_URI || `mongodb://127.0.0.1:27017/producsapi-${process.env.NODE_ENV}`,
+}
+
+export default config
+
+
