@@ -4,17 +4,15 @@
     "description": "Proyecto de API RESTFull con Node JS y Express JS",
     "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://sandersgutierrez.github.io)",
     "license": "MIT",
-    "main": "src/index.js",
+    "private": true,
     "type": "module",
     "scripts": {
-        "start": "node src/index.js",
         "dev": "nodemon --config nodemon.json",
         "format": "prettier --write .",
-        "lint": "eslint \"src/**/*.js\"",
-        "lint:fix": "eslint \"src/**/*.js\" --fix"
+        "lint": "eslint src/**/*.js",
+        "start": "node src/index.js"
     },
     "dependencies": {
-        "body-parser": "^1.20.0",
         "chalk": "^5.0.1",
         "cors": "^2.8.5",
         "express": "^4.18.1",
@@ -29,8 +27,8 @@
         "prettier": "^2.7.1"
     },
     "engines": {
-        "node": "16.17.0",
-        "npm": "8.19.1"
+        "node": ">=16",
+        "npm": ">=8"
     },
     "keywords": [
         "api",

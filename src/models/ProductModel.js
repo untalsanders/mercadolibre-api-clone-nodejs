@@ -6,11 +6,11 @@ const { Schema, model } = pkg
 const productSchema = Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     photo: {
         type: String,
-        required: true
+        required: true,
     },
     price: {
         type: Number,
@@ -24,7 +24,7 @@ const productSchema = Schema({
     },
     description: {
         type: String,
-        required: true
+        required: true,
     },
     createdAt: { type: Date, defaul: Date.now },
     updatedAt: { type: Date, defaul: Date.now },

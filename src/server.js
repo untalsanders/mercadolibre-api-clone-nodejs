@@ -1,21 +1,20 @@
 'use strict'
 
 import chalk from 'chalk'
-import express from 'express'
+import express, { json } from 'express'
 import swaggerUi from 'swagger-ui-express'
 import YAML from 'yamljs'
 import cors from 'cors'
-import bodyParser from 'body-parser'
-import api from './routes/api.js'
+import { productRouter } from './routes/index.js'
 
 const server = express()
 const swaggerDocument = YAML.load('./openapi.yml')
 
-server.use(bodyParser.json())
+server.use(json())
 server.use(cors())
 
-server.use('/api/v1', api)
 server.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+server.use('/api/v1/product', productRouter)
 
 function gracefullShutdown(message, code) {
     console.log(
