@@ -6,5 +6,9 @@ import config from './config.js'
 import './database.js'
 
 server.listen(config.PORT, config.HOST, () => {
-    console.info(`${chalk.white.bold.bgGreen(' SERVER ')} ${chalk.green('is running at')} ${chalk.blue('http://' + config.HOST + ':' + config.PORT)}`)
+    console.info(
+        `${chalk.white.bold.bgGreen(' SERVER ')} ${chalk.green('is running at')} ${chalk.blue(
+            'http://' + config.HOST + ':' + config.PORT
+        )}`
+    )
 })
