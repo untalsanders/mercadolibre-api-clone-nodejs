@@ -14,7 +14,7 @@ server.use(json())
 server.use(cors())
 
 server.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-server.use(router)
+server.use('/api', router)
 
 function gracefullShutdown(message, code) {
     console.log(`${chalk.white.bold.bgRed(' ERROR: ')} -> ${chalk.red(message)}: ${code}`)
