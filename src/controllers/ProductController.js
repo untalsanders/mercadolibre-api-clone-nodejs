@@ -95,7 +95,7 @@ export const deleteProduct = (req, res) => {
             })
         }
 
-        product.remove((err) => {
+        product.remove(err => {
             if (err) {
                 res.status(500).send({
                     message: `Error al borrar producto de la base de datos: ${err}`,

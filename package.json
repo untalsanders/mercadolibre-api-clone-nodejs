@@ -3,33 +3,9 @@
     "version": "0.1.0",
     "description": "Proyecto de API RESTFull con Node JS y Express JS",
     "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://sandersgutierrez.github.io)",
+    "homepage": "https://github.com/sandersgutierrez/products-api#readme",
     "license": "MIT",
     "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "nodemon --config nodemon.json",
-        "format": "prettier --write .",
-        "lint": "eslint src/**/*.js",
-        "start": "node src/index.js"
-    },
-    "dependencies": {
-        "chalk": "^5.0.1",
-        "cors": "^2.8.5",
-        "express": "^4.18.1",
-        "mongoose": "^6.6.1",
-        "swagger-ui-express": "^4.5.0",
-        "yamljs": "^0.3.0"
-    },
-    "devDependencies": {
-        "dotenv": "^16.0.2",
-        "eslint": "^8.23.1",
-        "nodemon": "^2.0.20",
-        "prettier": "^2.7.1"
-    },
-    "engines": {
-        "node": ">=16",
-        "npm": ">=8"
-    },
     "keywords": [
         "api",
         "products"
@@ -41,5 +17,34 @@
     "bugs": {
         "url": "https://github.com/sandersgutierrez/products-api/issues"
     },
-    "homepage": "https://github.com/sandersgutierrez/products-api#readme"
+    "type": "module",
+    "engines": {
+        "node": ">=16",
+        "npm": ">=8"
+    },
+    "scripts": {
+        "postinstall": "husky install",
+        "dev": "nodemon --config nodemon.json",
+        "format": "prettier --write .",
+        "lint": "eslint --fix . --ext .js",
+        "start": "node src/index.js"
+    },
+    "dependencies": {
+        "chalk": "5.2.0",
+        "cors": "2.8.5",
+        "express": "4.18.2",
+        "mongoose": "6.8.4",
+        "swagger-ui-express": "4.6.0",
+        "yamljs": "0.3.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "17.4.2",
+        "@commitlint/config-conventional": "17.4.2",
+        "dotenv": "16.0.3",
+        "eslint": "8.32.0",
+        "husky": "8.0.3",
+        "lint-staged": "13.1.0",
+        "nodemon": "2.0.20",
+        "prettier": "2.8.3"
+    }
 }

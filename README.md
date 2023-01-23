@@ -17,6 +17,7 @@ Postman collection for the Products API [here](https://github.com/sandersgutierr
 You can check the code of the website [here](https://github.com/sandersgutierrez/products-api-site)
 
 ## Support
+
 Help to maintain The Products API's infrastructure [here](https://sandersgutierrez.github.io/products-api-site/help-us).
 
 If you want to know more about The Products API click [here](https://sandersgutierrez.github.io/products-api-site/about).
