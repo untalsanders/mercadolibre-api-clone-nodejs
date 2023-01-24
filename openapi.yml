@@ -17,11 +17,11 @@ info:
     email: ing.sanders@gmail.com
 
 tags:
-  - name: Products
+  - name: Product
     description: Everything about Products
 
 servers:
-  - url: http://{HOST}:{PORT}/{BASE_PATH}/{VERSION}
+  - url: http://{HOST}:{PORT}/{BASE_PATH}
     variables:
       HOST:
         default: '127.0.0.1'
@@ -29,14 +29,12 @@ servers:
         default: '3000'
       BASE_PATH:
         default: api
-      VERSION:
-        default: v1
 
 paths:
-  /products:
+  /product:
     get:
       tags:
-        - Products
+        - Product
       summary: Get all products
       responses:
         200:
@@ -61,7 +59,7 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       tags:
-        - Products
+        - Product
       summary: Create a product
       responses:
         201:
@@ -76,7 +74,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /products/{productId}:
+  /product/{productId}:
     parameters:
       - name: productId
         description: The unique identifier of the product
@@ -86,7 +84,7 @@ paths:
           $ref: '#/components/schemas/ProductId'
     get:
       tags:
-        - Products
+        - Product
       summary: Read a product
       responses:
         200:
@@ -109,7 +107,7 @@ paths:
                 $ref: '#/components/schemas/Error'
     put:
       tags:
-        - Products
+        - Product
       summary: Update a product
       responses:
         200:
@@ -136,11 +134,6 @@ components:
     ProductId:
       type: string
       description: The unique identifier of a product
-    Category:
-      type: object
-      properties:
-        name:
-          type: string
     Product:
       type: object
       required:
