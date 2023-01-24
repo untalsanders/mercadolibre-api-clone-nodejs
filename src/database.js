@@ -18,6 +18,6 @@ connect(config.DB_URI, mongooseOptions)
         console.log(`${chalk.white.bold.bgRed(' ERROR ')} in initial connection -> ${chalk.red(err.message)}`)
     )
 
-if (process.env.NODE_ENV !== 'production') {
+if (config.ENV !== 'production') {
     connection.on('error', err => console.error(err))
 }
