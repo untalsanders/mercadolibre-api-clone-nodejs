@@ -12,7 +12,7 @@ Products API is a RESTful API to the products taxonomy. You will access hundreds
 
 Postman collection for the Products API.
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1753652-a95d205b-6021-4f7b-996c-464c41fad30f?action=collection%2Ffork&collection-url=entityId%3D1753652-a95d205b-6021-4f7b-996c-464c41fad30f%26entityType%3Dcollection%26workspaceId%3Dcf379dec-b5fa-41a5-8d18-c7ee6080f3f2)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1753652-a95d205b-6021-4f7b-996c-464c41fad30f?action=collection%2Ffork&collection-url=entityId%3D1753652-a95d205b-6021-4f7b-996c-464c41fad30f%26entityType%3Dcollection%26workspaceId%3Dcf379dec-b5fa-41a5-8d18-c7ee6080f3f2#?env%5Bproducts-api-dev%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQiLCJzZXNzaW9uVmFsdWUiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJzZXNzaW9uSW5kZXgiOjB9XQ==)
 
 ## Website
 
