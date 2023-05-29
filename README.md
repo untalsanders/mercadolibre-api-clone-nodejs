@@ -2,17 +2,17 @@
 
 # Products API
 
-Products API is a RESTful API to the products taxonomy. You will access hundreds of products which have basic information such as images, price, category, description and taxonomic information of the product.
+[Products API](https://sandersgutierrez.github.io/products-api-site/) is a RESTful API to the products taxonomy. You will access hundreds of products which have basic information such as images, price, category, description and taxonomic information of the product.
 
 ## Getting Started
 
-**Check out the [documentation](https://sandersgutierrez.github.io/products-api-site) to get started**
+**Check out the [documentation](https://sandersgutierrez.github.io/products-api-site/documentation) to get started**
 
 ## Postman collection
 
-Postman collection for the Products API.
+Click the Run in Postman button to fork the collection to your own workspace. You can pull changes if the collection is updated in the future.
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1753652-a95d205b-6021-4f7b-996c-464c41fad30f?action=collection%2Ffork&collection-url=entityId%3D1753652-a95d205b-6021-4f7b-996c-464c41fad30f%26entityType%3Dcollection%26workspaceId%3Dcf379dec-b5fa-41a5-8d18-c7ee6080f3f2#?env%5Bproducts-api-dev%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQiLCJzZXNzaW9uVmFsdWUiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJzZXNzaW9uSW5kZXgiOjB9XQ==)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/1753652-a95d205b-6021-4f7b-996c-464c41fad30f?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D1753652-a95d205b-6021-4f7b-996c-464c41fad30f%26entityType%3Dcollection%26workspaceId%3D346b9ec7-d831-45fe-bb28-fb5146452099)
 
 ## Website
 
