@@ -1,5 +1,5 @@
 'use strict'
 
-const removeExtensionFilename = filename => filename.split('.').shift()
+const removeFileExtension = filename => filename.split('.').shift()
 
-export { removeExtensionFilename }
+export { removeFileExtension }
