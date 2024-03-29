@@ -4,7 +4,7 @@
     "description": "Proyecto de API RESTFull con Node JS y Express JS",
     "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://sandersgutierrez.github.io)",
     "homepage": "https://github.com/sandersgutierrez/products-api#readme",
-    "license": "MIT",
+    "license": "GPL-3.0",
     "private": true,
     "keywords": [
         "api",
