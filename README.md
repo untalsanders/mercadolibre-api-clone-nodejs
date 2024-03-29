@@ -2,11 +2,11 @@
 
 # Products API
 
-[Products API](https://sandersgutierrez.github.io/products-api-site/) is a RESTful API to the products taxonomy. You will access hundreds of products which have basic information such as images, price, category, description and taxonomic information of the product.
+[MercadoLibre Clone](https://untalsanders.github.io/products-api-site/) is a RESTful API to the products taxonomy. You will access hundreds of products which have basic information such as images, price, category, description and taxonomic information of the product.
 
 ## Getting Started
 
-**Check out the [documentation](https://sandersgutierrez.github.io/products-api-site/documentation) to get started**
+**Check out the [documentation](https://untalsanders.github.io/products-api-site/documentation) to get started**
 
 ## Postman collection
 
@@ -16,10 +16,10 @@ Click the Run in Postman button to fork the collection to your own workspace. Yo
 
 ## Website
 
-You can check the code of the website [here](https://github.com/sandersgutierrez/products-api-site)
+You can check the code of the website [here](https://github.com/untalsanders/products-api-site)
 
 ## Support
 
-Help to maintain The Products API's infrastructure [here](https://sandersgutierrez.github.io/products-api-site/help-us).
+Help to maintain The Products API's infrastructure [here](https://untalsanders.github.io/products-api-site/help-us).
 
-If you want to know more about The Products API click [here](https://sandersgutierrez.github.io/products-api-site/about).
+If you want to know more about The Products API click [here](https://untalsanders.github.io/products-api-site/about).

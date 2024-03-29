@@ -2,8 +2,8 @@
     "name": "products-api",
     "version": "0.1.0",
     "description": "Proyecto de API RESTFull con Node JS y Express JS",
-    "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://sandersgutierrez.github.io)",
-    "homepage": "https://github.com/sandersgutierrez/products-api#readme",
+    "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://untalsanders.github.io)",
+    "homepage": "https://github.com/untalsanders/mercadolibre-api-clone-nodejs#readme",
     "license": "GPL-3.0",
     "private": true,
     "keywords": [
@@ -12,15 +12,15 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sandersgutierrez/products-api.git"
+        "url": "git+https://github.com/untalsanders/mercadolibre-api-clone-nodejs.git"
     },
     "bugs": {
-        "url": "https://github.com/sandersgutierrez/products-api/issues"
+        "url": "https://github.com/untalsanders/mercadolibre-api-clone-nodejs/issues"
     },
     "type": "module",
     "engines": {
-        "node": ">=16",
-        "npm": ">=8"
+        "node": ">=18",
+        "npm": ">=9"
     },
     "scripts": {
         "postinstall": "husky install",
@@ -32,19 +32,19 @@
     "dependencies": {
         "chalk": "5.2.0",
         "cors": "2.8.5",
-        "express": "4.18.2",
-        "mongoose": "6.8.4",
+        "express": "4.19.2",
+        "mongoose": "6.12.7",
         "swagger-ui-express": "4.6.0",
         "yamljs": "0.3.0"
     },
     "devDependencies": {
-        "@commitlint/cli": "17.4.2",
-        "@commitlint/config-conventional": "17.4.2",
-        "dotenv": "16.0.3",
-        "eslint": "8.32.0",
-        "husky": "8.0.3",
-        "lint-staged": "13.1.0",
-        "nodemon": "2.0.20",
-        "prettier": "2.8.3"
+        "@commitlint/cli": "19.2.1",
+        "@commitlint/config-conventional": "19.1.0",
+        "dotenv": "16.4.5",
+        "eslint": "8.57.0",
+        "husky": "9.0.11",
+        "lint-staged": "15.2.2",
+        "nodemon": "3.1.0",
+        "prettier": "3.2.5"
     }
 }
