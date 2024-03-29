@@ -12,12 +12,14 @@ const mongooseOptions = {
     useUnifiedTopology: true,
 }
 
-connect(config.MONGODB_URI, mongooseOptions)
-    .then(() => console.log(`${chalk.black.bold.bgWhite(' DB ')} ${chalk.green(' Connection has been successfuly! ')}`))
+connect(config.mongodb_uri, mongooseOptions)
+    .then(() =>
+        console.log(`${chalk.black.bold.bgWhite(' DB ')} ${chalk.green(' Connection has been successfully! ')}`)
+    )
     .catch(err =>
         console.log(`${chalk.white.bold.bgRed(' ERROR ')} in initial connection -> ${chalk.red(err.message)}`)
     )
 
-if (config.ENV !== 'production') {
+if (config.env !== 'production') {
     connection.on('error', err => console.error(err))
 }

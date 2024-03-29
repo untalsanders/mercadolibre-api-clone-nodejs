@@ -5,10 +5,10 @@ import server from './server.js'
 import config from './config.js'
 import './database.js'
 
-server.listen(config.PORT, config.HOST, () => {
+server.listen(config.port, config.host, () => {
     console.info(
         `${chalk.white.bold.bgGreen(' SERVER ')} ${chalk.green('is running at')} ${chalk.blue(
-            'http://' + config.HOST + ':' + config.PORT
+            'http://' + config.host + ':' + config.port
         )}`
     )
 })
