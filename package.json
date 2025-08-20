@@ -30,22 +30,22 @@
         "start": "node src/index.js"
     },
     "dependencies": {
-        "chalk": "5.2.0",
         "cors": "2.8.5",
-        "express": "4.19.2",
-        "mongoose": "6.12.7",
-        "swagger-ui-express": "4.6.0",
+        "express": "5.1.0",
+        "mongoose": "8.17.2",
         "yamljs": "0.3.0"
     },
     "devDependencies": {
-        "@commitlint/cli": "19.2.1",
-        "@commitlint/config-conventional": "19.1.0",
-        "dotenv": "16.4.5",
-        "eslint": "8.57.0",
-        "husky": "9.0.11",
-        "lint-staged": "15.2.2",
-        "nodemon": "3.1.0",
-        "prettier": "3.2.5"
+        "@commitlint/cli": "19.8.1",
+        "@commitlint/config-conventional": "19.8.1",
+        "chalk": "5.6.0",
+        "dotenv": "17.2.1",
+        "eslint": "9.33.0",
+        "husky": "9.1.7",
+        "lint-staged": "16.1.5",
+        "nodemon": "3.1.10",
+        "prettier": "3.6.2",
+        "swagger-ui-express": "5.0.1"
     },
     "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }
