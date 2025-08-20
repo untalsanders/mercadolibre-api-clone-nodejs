@@ -6,8 +6,8 @@ Everybody is welcome to contribute to the Products API.
 
 The process is straight-forward and it applies to the following repos:
 
--   [products-api][1]: The project serving the API.
--   [products-site][2]: This is the documentation site.
+- [products-api][1]: The project serving the API.
+- [products-site][2]: This is the documentation site.
 
 1. Fork the repo.
 2. Write your code for the [API][1], the [documentation site][2].
