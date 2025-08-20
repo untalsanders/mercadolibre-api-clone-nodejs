@@ -5,11 +5,11 @@ import dotenv from 'dotenv'
 const MONGODB_NAME = process.env.NODE_ENV !== 'production' ? 'db-ml-api-clone-dev' : 'db-ml-api-clone'
 
 if (process.env.APP_ENV !== 'production') {
-    dotenv.config()
+  dotenv.config()
 }
 
 const config = {
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Application Name
     |--------------------------------------------------------------------------
@@ -19,9 +19,9 @@ const config = {
     | any other location as required by the application or its packages.
     |
     */
-    name: process.env.APP_NAME ?? 'Application',
+  name: process.env.APP_NAME ?? 'Application',
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
@@ -31,9 +31,9 @@ const config = {
     | services the application utilizes. Set this in your ".env" file.
     |
     */
-    env: process.env.APP_ENV ?? 'production',
+  env: process.env.APP_ENV ?? 'production',
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
     |--------------------------------------------------------------------------
@@ -44,9 +44,9 @@ const config = {
     |
     */
 
-    debug: process.env.APP_DEBUB ?? false,
+  debug: process.env.APP_DEBUB ?? false,
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Application URL
     |--------------------------------------------------------------------------
@@ -56,10 +56,10 @@ const config = {
     | your application so that it is used when running Artisan tasks.
     |
     */
-    url: process.env.APP_URL ?? 'http://localhost',
-    host: process.env.HOST ?? '127.0.0.1',
-    port: process.env.PORT ?? 3000,
-    mongodb_uri: process.env.MONGODB_URI ?? `mongodb://127.0.0.1:27017/${MONGODB_NAME}`,
+  url: process.env.APP_URL ?? 'http://localhost',
+  host: process.env.HOST ?? '127.0.0.1',
+  port: process.env.PORT ?? 3000,
+  mongodb_uri: process.env.MONGODB_URI ?? `mongodb://127.0.0.1:27017/${MONGODB_NAME}`,
 }
 
 export default config

@@ -17,7 +17,7 @@ server.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 server.use('/api', router)
 
 function gracefullShutdown(message, code) {
-    console.log(`${chalk.white.bold.bgRed(' ERROR: ')} -> ${chalk.red(message)}: ${code}`)
+  console.log(`${chalk.white.bold.bgRed(' ERROR: ')} -> ${chalk.red(message)}: ${code}`)
 }
 
 process.on('exit', code => gracefullShutdown('About to exit with code: ', code))

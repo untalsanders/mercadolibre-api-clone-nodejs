@@ -1,59 +1,59 @@
 {
-    "name": "products-api",
-    "version": "0.1.0",
-    "description": "Proyecto de API RESTFull con Node JS y Express JS",
-    "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://untalsanders.github.io)",
-    "homepage": "https://github.com/untalsanders/mercadolibre-api-clone-nodejs#readme",
-    "license": "GPL-3.0",
-    "private": true,
-    "keywords": [
-        "api",
-        "products"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/untalsanders/mercadolibre-api-clone-nodejs.git"
-    },
-    "bugs": {
-        "url": "https://github.com/untalsanders/mercadolibre-api-clone-nodejs/issues"
-    },
-    "type": "module",
-    "engines": {
-        "node": ">=18",
-        "npm": ">=9"
-    },
-    "scripts": {
-        "prepare": "husky",
-        "dev": "nodemon --config nodemon.json",
-        "start": "node src/index.js",
-        "fmt": "prettier --write .",
-        "lint": "eslint --fix . --ext .js"
-    },
-    "dependencies": {
-        "cors": "2.8.5",
-        "express": "5.1.0",
-        "mongoose": "8.17.2",
-        "yamljs": "0.3.0"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "19.8.1",
-        "@commitlint/config-conventional": "19.8.1",
-        "@eslint/js": "9.33.0",
-        "chalk": "5.6.0",
-        "cz-conventional-changelog": "3.3.0",
-        "dotenv": "17.2.1",
-        "eslint": "9.33.0",
-        "globals": "16.3.0",
-        "husky": "9.1.7",
-        "lint-staged": "16.1.5",
-        "nodemon": "3.1.10",
-        "prettier": "3.6.2",
-        "swagger-ui-express": "5.0.1"
-    },
-    "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b",
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
+  "name": "products-api",
+  "version": "0.1.0",
+  "description": "Proyecto de API RESTFull con Node JS y Express JS",
+  "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://untalsanders.github.io)",
+  "homepage": "https://github.com/untalsanders/mercadolibre-api-clone-nodejs#readme",
+  "license": "GPL-3.0",
+  "private": true,
+  "keywords": [
+    "api",
+    "products"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/untalsanders/mercadolibre-api-clone-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/untalsanders/mercadolibre-api-clone-nodejs/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "dev": "nodemon --config nodemon.json",
+    "start": "node src/index.js",
+    "fmt": "prettier --write .",
+    "lint": "eslint --fix . --ext .js"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "5.1.0",
+    "mongoose": "8.17.2",
+    "yamljs": "0.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@eslint/js": "9.33.0",
+    "chalk": "5.6.0",
+    "cz-conventional-changelog": "3.3.0",
+    "dotenv": "17.2.1",
+    "eslint": "9.33.0",
+    "globals": "16.3.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.1.5",
+    "nodemon": "3.1.10",
+    "prettier": "3.6.2",
+    "swagger-ui-express": "5.0.1"
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  }
 }
