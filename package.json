@@ -23,11 +23,11 @@
         "npm": ">=9"
     },
     "scripts": {
-        "postinstall": "husky install",
+        "prepare": "husky",
         "dev": "nodemon --config nodemon.json",
-        "format": "prettier --write .",
-        "lint": "eslint --fix . --ext .js",
-        "start": "node src/index.js"
+        "start": "node src/index.js",
+        "fmt": "prettier --write .",
+        "lint": "eslint --fix . --ext .js"
     },
     "dependencies": {
         "cors": "2.8.5",
