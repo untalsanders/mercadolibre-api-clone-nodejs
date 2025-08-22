@@ -4,11 +4,11 @@ import chalk from 'chalk'
 import mongoose from 'mongoose'
 import config from './config.js'
 
+const { engine, host, port, user, pass, name } = config.database
+const url = `${engine}://${user}:${pass}@${host}:${port}/${engine === 'mongodb' ? '?authMechanism=SCRAM-SHA-256' : ''}`
+const options = { dbName: name }
+
 const { connect, connection } = mongoose
-
-const url = `${config.database.engine}://${config.database.user}:${config.database.pass}@${config.database.host}:${config.database.port}/${config.database.engine === 'mongodb' ? 'authMechanism=SCRAM-SHA-256' : ''}`
-const options = { dbName: config.database.name }
-
 mongoose.set('strictQuery', false)
 
 await connect(url, options)
