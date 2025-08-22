@@ -1,0 +1,48 @@
+@host = localhost
+@port = 3000
+@baseUrl = http://{{host}}:{{port}}
+@contentType = application/json
+
+### Get all products
+GET {{baseUrl}}/api/product
+Content-Type: {{contentType}}
+
+
+### Get a product by id
+# @prompt id
+GET {{baseUrl}}/api/product/{{id}}
+Content-Type: {{contentType}}
+
+
+### Create product
+POST {{baseUrl}}/api/product
+Content-Type: {{contentType}}
+
+{
+  "name": "Product 4",
+  "photo": "https://example.com/product4.jpg",
+  "price": 74.8,
+  "category": "accesories",
+  "description": "This is a great product4."
+}
+
+
+### Find a product by ID and update it
+# @prompt id
+PUT {{baseUrl}}/api/product/{{id}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Product 1",
+  "photo": "https://example.com/product1.jpg",
+  "price": 79.6,
+  "category": "phones",
+  "description": "This is a new great product1."
+}
+
+
+### Delete a product by id
+# @prompt id
+DELETE {{baseUrl}}/api/product/{{id}}
+Content-Type: {{contentType}}
+
