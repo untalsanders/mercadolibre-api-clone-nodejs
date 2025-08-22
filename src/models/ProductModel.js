@@ -1,9 +1,9 @@
 'use strict'
 
-import pkg from 'mongoose'
-const { Schema, model } = pkg
+import mongoose from 'mongoose'
+const { Schema, model } = mongoose
 
-const productSchema = Schema({
+const productSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -30,4 +30,4 @@ const productSchema = Schema({
   updatedAt: { type: Date, defaul: Date.now },
 })
 
-export const Product = model('Product', productSchema)
+export const ProductModel = model('Product', productSchema)
