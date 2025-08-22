@@ -1,110 +1,37 @@
 'use strict'
 
-import { Product } from '../models/ProductModel.js'
+import { ProductModel } from '../models/ProductModel.js'
 
-export const getProducts = (req, res) => {
-  Product.find({}, { __v: 0 }, (err, products) => {
-    if (err) {
-      return res.status(500).send({
-        status: 500,
-        message: `Ha ocurrido un error al procesar la peticion: ${err}`,
-      })
-    }
-
-    if (!products) {
-      return res.status(204).send({
-        status: 204,
-        message: 'No existen productos',
-      })
-    }
-
-    res.status(200).send({
-      status: 200,
-      message: 'OK',
-      data: products,
-    })
-  })
+export const getProducts = async (_, res) => {
+  const products = await ProductModel.find()
+  res.status(200).send({ status: 200, message: 'Products retrieved successfully.', data: products })
 }
 
-export const getProduct = (req, res) => {
+export const getProduct = async (req, res) => {
   const { productId } = req.params
+  const product = await ProductModel.findById(productId)
 
-  Product.findById(productId, (err, product) => {
-    if (err) {
-      return res.status(500).send({
-        message: `Ha ocurrido un error al realizar la petición: ${err}`,
-      })
-    }
+  if (!product) {
+    return res.status(404).send({ message: 'The product does not exists.' })
+  }
 
-    if (!product) {
-      return res.status(404).send({
-        message: 'El producto no existe',
-      })
-    }
-
-    res.status(200).send(product)
-  })
+  res.status(200).send(product)
 }
 
-export const saveProduct = (req, res) => {
-  const product = new Product()
-
-  ;({
-    name: product.name,
-    photo: product.photo,
-    price: product.price,
-    category: product.category,
-    description: product.description,
-  } = req.body)
-
-  product.save((err, productSaved) => {
-    if (err) {
-      res.status(500).send({
-        message: `Error al guardar en la base de datos: ${err}`,
-      })
-    }
-
-    res.status(201).send({ productSaved })
-  })
+export const saveProduct = async (req, res) => {
+  const productSaved = await ProductModel.insertOne(req.body)
+  res.status(201).send({ message: 'The product has been created successfully.', data: { productSaved } })
 }
 
-export const updateProduct = (req, res) => {
+export const updateProduct = async (req, res) => {
   const { productId } = req.params
-  const updateBody = req.body
-
-  Product.findByIdAndUpdate(productId, updateBody, { new: true }, (err, productUpdated) => {
-    if (err) {
-      res.status(500).send({
-        message: `Error al actualizar producto: ${err}`,
-      })
-    }
-
-    res.status(201).send({
-      producto: productUpdated,
-    })
-  })
+  await ProductModel.updateOne({ _id: productId }, req.body)
+  const productUpdated = await ProductModel.findById(productId)
+  res.status(200).send({ status: 200, message: 'Product updated successfully.', data: { productUpdated } })
 }
 
-export const deleteProduct = (req, res) => {
+export const deleteProduct = async (req, res) => {
   const { productId } = req.params
-
-  Product.findById(productId, (err, product) => {
-    if (err) {
-      res.status(500).send({
-        message: `Error al borrar producto de la base de datos: ${err}`,
-      })
-    }
-
-    product.remove(err => {
-      if (err) {
-        res.status(500).send({
-          message: `Error al borrar producto de la base de datos: ${err}`,
-        })
-      }
-
-      res.status(200).send({
-        message: 'El producto ha sido borrado',
-      })
-    })
-  })
+  await ProductModel.deleteOne({ _id: productId })
+  res.status(204).send()
 }
