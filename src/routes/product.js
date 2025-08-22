@@ -1,7 +1,7 @@
 'use strict'
 
 import { Router } from 'express'
-import { getProducts, getProduct, saveProduct, updateProduct, deleteProduct } from '../controllers/ProductController.js'
+import { deleteProduct, getProduct, getProducts, saveProduct, updateProduct } from '../controllers/ProductController.js'
 
 const router = Router()
 
